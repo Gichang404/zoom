@@ -10,8 +10,18 @@ html(lang="en")
         header
             h1 Goom
         main 
-            ul
-            form
-                input(type="text", placeholder="메세지를 적어주세요.", required)
-                button Send
+            div#welcome
+                form
+                    input(type="text", placeholder="room name", required)
+                    button Join Room
+            div#room
+                h3
+                ul
+                form#name
+                    input(type="text", placeholder="nickname", required)
+                    button Save
+                form#msg
+                    input(type="text", placeholder="message", required)
+                    button Send
+        script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
